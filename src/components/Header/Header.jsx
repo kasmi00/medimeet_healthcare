@@ -2,7 +2,6 @@ import { useContext, useEffect, useRef } from "react";
 import { BiMenu } from "react-icons/bi";
 import { Link, NavLink } from "react-router-dom";
 import "../../App.css";
-import logo from "../../assets/images/logo.png";
 import { AuthContext } from "../../contexts/AuthContext";
 import "../../index.css";
 
@@ -54,11 +53,15 @@ const Header = () => {
     <header className="header flex items-center" ref={headerRef}>
       <div className="container">
         <div className="flex items-center justify-between gap-8">
-          {/* =================== logo =============== */}
-          <div className="logo-container flex items-center justify-start">
-            <img src={logo} className="logo w-15 h-15" alt="App Logo" />
-          </div>
 
+          {/* =================== Replaced logo with text =============== */}
+          <div className="logo-container flex items-center justify-start">
+            <Link to="/home">
+              <h1 className="text-2xl font-bold text-primaryColor tracking-wide">
+                Medi Meet
+              </h1>
+            </Link>
+          </div>
 
           {/* ====================== menu ======================== */}
           <nav
@@ -91,10 +94,10 @@ const Header = () => {
               <div className="flex items-center gap-2">
                 <Link
                   to={`${role === "worker"
-                    ? "/workers/profile/me"
-                    : role === "admin"
-                      ? "/admin/profile/me"
-                      : "/users/profile/me"
+                      ? "/workers/profile/me"
+                      : role === "admin"
+                        ? "/admin/profile/me"
+                        : "/users/profile/me"
                     }`}
                 >
                   <figure className="w-[35px] h-[35px] rounded-full overflow-hidden cursor-pointer">
