@@ -17,14 +17,14 @@ import WorkerList from "../components/Workers/WorkerList";
 const Home = () => {
   return (
     <>
-      {/* Hero Section - Simplified */}
+      {/* Hero Section - Left-Aligned Button */}
       <section className="hero__section pt-16 lg:pt-20 2xl:h-[400px]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-xl mx-auto">
+          <div className="max-w-xl mx-auto text-left">
             <h1 className="text-3xl md:text-4xl font-bold text-headingColor leading-tight">
               We help patients live a healthy, longer life.
             </h1>
-            <button className="btn mt-6">Request an Appointment</button>
+            <button className="btn mt-6 ml-0">Request an Appointment</button>
           </div>
         </div>
       </section>
